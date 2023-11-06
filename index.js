@@ -15,7 +15,7 @@ const root = path.join(__dirname, 'public');
 // middlewares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000"],
   })
 );
 app.use("/api/user", userRouter);
