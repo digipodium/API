@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
+
+if (process.env.NODE_ENV !== 'production') {
+  require("dotenv").config();
+}
 
 mongoose
-  .connect('mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/expressapi?retryWrites=true&w=majority')
+  .connect(process.env.DB_URL)
   .then((result) => {
     console.log("database connected");
   })
