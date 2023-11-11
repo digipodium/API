@@ -28,7 +28,7 @@ router.get("/generateCode", (req, res) => {
 
 router.post("/generateCodeFromData", (req, res) => {
   const { dependencies, files, name, createdBy } = req.body;
-  // console.log(dependencies);
+  console.log(dependencies);
   createCode(dependencies, files, name, (filename) => {
     new codeModel({
       title: name,

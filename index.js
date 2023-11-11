@@ -25,7 +25,7 @@ app.use("/api/user", userRouter);
 app.use('/api/code', codeRouter);   
 app.use('/api/util', utilRouter);
 
-// app.use('/api/archives', express.static('./archives'));
+app.use('/api/archives', express.static('./archives'));
 app.use(express.static("./static/uploads"));
 app.use(express.static("./public"));
 // console.log(root);
