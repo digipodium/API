@@ -22,7 +22,7 @@ app.use(
 app.use(express.json());
 
 app.use("/api/user", userRouter);
-app.use('/api/code', codeRouter);   
+app.use('/api/code', codeRouter);
 app.use('/api/util', utilRouter);
 
 app.use('/api/archives', express.static('./archives'));
@@ -33,7 +33,6 @@ app.get("/api", (req, res) => {
   res.send("API Response");
 });
 app.use('*',history('index.html', { root }));
-
 
 app.listen(process.env.PORT, () => {
   console.info("Server Started>>");
